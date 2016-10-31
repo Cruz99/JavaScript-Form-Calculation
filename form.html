@@ -1,0 +1,148 @@
+
+<!doctype html>
+<!--Pawel Gorski -->
+<!--ID: R00144145-->
+
+<html lang="en">
+<head>
+   <!--Getting fonts and css file-->
+   <link rel = "stylesheet" type = "text/css" href="css/style.css">
+    <meta name="description" content="Interactive Menu for Coffee Shop | Coffee Cups ">
+   <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
+   <title>Form - Pawel Gorski</title>
+</head>
+<body >
+<header>
+   <h2  id = "header"> Welcome in Coffee Shop </h2>
+</header>
+<main>
+   <div id = "main-page">
+      <!--Main page section-->
+      <div id = "menu">
+         <!--Relative menu section-->  <!-- -->
+         <form  name = "myForm" id = "myForm" method = "get" action = "http://atlantis.cit.ie/displayvalues.php"><!--Form -->
+            <div> <!--Div with each menu section(button) -->
+               <label class = "button-label" id = "button-label-1"><span class ="button-header">Cups</span>  </label><br>
+               <div class = "section-selection" id = "section-selection-1">
+                  <table>
+                     <tr>
+                        <td><input id = "cup-small" class = "cups" type = "checkbox"  name = "cups" value = "9.99"><span>Small</span></td>
+                        <td class = "price-cup"> &euro;9.99</td>
+                     </tr>
+                     <tr>
+                        <td><input id = "cup-medium" class = "cups" type = "checkbox"  name = "cups" value = "12.99"><span>Medium</span></td>
+                        <td class = "price-cup"> &euro;12.99</td>
+                     </tr>
+                     <tr>
+                        <td><input id = "cup-large" class = "cups" type = "checkbox"  name ="cups" value = "14.99"><span>Large </span></td>
+                        <td class = "price-cup">&euro;14.99</td>
+                     </tr>
+                     <tr>
+                        <td><input id = "cup-xlarge" class = "cups" type = "checkbox" name = "cups" value = "15.99"><span>Extra Large</span></td>
+                        <td  class = "price-cup">  &euro;15.99 </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div>
+               <label  class = "button-label" id = "button-label-2" ><span class ="button-header">Upgrades</span></label><br>
+               <div class = "section-selection" id = "section-selection-2">
+                  <table>
+                     <tr>
+                        <td><input type = "checkbox"   class = "class-upgrade" name = "upgrades" value = "3" ><span>Transparent base </span></td>
+                        <td class = "price-upgrade">&euro;3.00</td>
+                     </tr>
+                     <tr>
+                        <td><input type = "checkbox"  class = "class-upgrade" name = "upgrades" value = "7"><span>Thermos</span></td>
+                        <td class = "price-upgrade"> &euro;7.00</td>
+                     </tr>
+                     <tr>
+                        <td><input type = "checkbox"  class = "class-upgrade" name = "upgrades" value = "6"><span>Upload your logo	</span></td>
+                        <td class = "price-upgrade"> &euro;6.00</td>
+                     </tr>
+                     <tr>
+                        <td><input type = "checkbox"  id ="upgrade-value" class = "class-upgrade" name = "upgrades" value = "2"><span>Engraved Initials</span></td>
+                        <td class = "price-upgrade"> &euro;2.00</td>
+                     </tr>
+                  </table>
+                  <input id = "hidden-upgrade" name = "upgrades" value = "0">
+               </div>
+            </div>
+            <div>
+               <label class = "button-label"  id = "button-label-3" ><span class ="button-header">Add-ons</span></label><br>
+               <div class = "section-selection" id ="section-selection-3">
+                  <table>
+                     <tr>
+                        <td><input type = "checkbox" class = "class-addon" name = "Add-ons" value = "15" ><span>Hot plate for your mug</span></td>
+                        <td class ="price-addon"> &euro;15.00</td>
+                     </tr>
+                     <tr>
+                        <td><input type = "checkbox" class = "class-addon" name = "Add-ons" value = "3"><span>Mug Lid </span></td>
+                        <td class ="price-addon">&euro;3.00</td>
+                     </tr>
+                     <tr>
+                        <td><input type = "checkbox" class = "class-addon" name = "Add-ons" value = "6"><span>Mug pull-cord </span></td>
+                        <td class ="price-addon">&euro;6.00</td>
+                     </tr>
+                  </table>
+                  <input id = "hidden-addon" name = "Add-ons" value = "0">
+               </div>
+            </div>
+            <div>
+               <label class = "button-label"  id = "button-label-4"><span class ="button-header">Supplier</span></label><br>
+               <div class = "section-selection" id = "section-selection-4">
+                  <table>
+                     <tr>
+                        <td><input  type = "checkbox" class = "class-supplier" name = "supplier" value = "15" ><span>1kg coffee</span></td>
+                        <td class ="price-supplier"> &euro;15.00</td>
+                     </tr>
+                     <tr>
+                        <td><input  type = "checkbox" class = "class-supplier" name = "supplier" value = "3"><span>Condensed Milk</span></td>
+                        <td class ="price-supplier"> &euro;3.00</td>
+                     </tr>
+                     <tr>
+                        <td><input  type = "checkbox" class = "class-supplier" name = "supplier" value = "6"><span>1000 Tea Bags</span></td>
+                        <td class ="price-supplier"> &euro;6.00</td>
+                     </tr>
+                  </table>
+                  <input id = "hidden-supplier" name = "supplier" value = "0">
+               </div>
+            </div>
+
+            <!--Div with 3 sections, purchase button, window with price and submit form button -->
+            <div id = "purchase-section">
+               <div id = "purchase-item-1" class = "purchase-section-label">
+                  <Button id = "calculate-button" type ="button" >Calculate</Button> <!--Calculate button -->
+               </div>
+               <div id = "purchase-item-2" class = "purchase-section-label">
+                  <label id = "costTot">0.00</label>                                <!--Price label -->
+               </div>
+               <div id = "purchase-item-3">
+                  <input type="submit" form ="myForm" value = "Purchase" >             <!--Purchase button-->
+               </div>
+            </div>
+
+            <!--Picture sessions -->
+            <div id ="cup-container">
+               <div id = "cup-pic" title ="coffee mug"></div> <!--Div with initial picture (javaScript) -->
+               <div class = "cup-item-buttons">
+                  <div class ="cup-div-1">
+                     <div>
+                        <button type="button" class = "buttons"   id ="previous"><span>Previous</span></button>
+                        <button type="button"  class = "buttons"   id = "next"><span>Next</span></button>
+                        <input id = "hidden-cup-color" name = "cup-color" value = "">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</main>
+<footer>
+   <p>@ Designed by Pawel Gorski</p>
+   <script src="js/calculate.js"></script>
+</footer>
+</body>
+</html>
